@@ -1,6 +1,6 @@
 const songSearch = async() =>{
     const songInput = document.getElementById("songInput").value;
-    url = `https://api.lyrics.ovh/suggest/${songInput}`;
+    const url = `https://api.lyrics.ovh/suggest/${songInput}`;
     const res = await fetch(url);
     const data = await res.json();
     songDetails(data.data);
@@ -40,7 +40,7 @@ const songDetails = songs =>{
 }
 
 const displayLyrics = async(name)=>{
-    url = `https://api.lyrics.ovh/v1/${name}`;
+    const url = `https://api.lyrics.ovh/v1/${name}`;
     const res =await fetch(url);
     const data =await res.json();
     lyrics(data);
